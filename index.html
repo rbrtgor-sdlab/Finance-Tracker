@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <h1><i class="fas fa-wallet"></i> Finance Tracker</h1>
+    <nav>
+      <a href="./index.html">Dashboard</a>
+      <a href="./addtransaction.html">Add Transaction</a>
+      <a href="./transactionhistory.html">Transaction History</a>
+    </nav>
+
+    <div class="container">
+      <h1>Dashboard</h1>
+
+      <h2>Balance: KES <span id="balance">0</span></h2>
+
+      <div class="summary">
+        <div>
+          <h3>Income</h3>
+          <p id="income">0</p>
+        </div>
+        <div>
+          <h3>Expenses</h3>
+          <p id="expense">0</p>
+        </div>
+      </div>
+
+      <canvas id="chart"></canvas>
+    </div>
+
+    <script src="./script.js defer></script>
+  </body>
+</html>

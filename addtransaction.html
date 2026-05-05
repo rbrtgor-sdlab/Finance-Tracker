@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="./index.html">Dashboard</a>
+      <a href="./addtransaction.html">Add Transaction</a>
+      <a href="./transactionhistory.html">Transaction History</a>
+    </nav>
+
+    <div class="container">
+      <h1>Add Transaction</h1>
+
+      <form id="form">
+        <input type="text" id="text" placeholder="Description" required />
+        <div class="form-group">
+          <label for="date">Transaction Date</label>
+          <input type="date" id="date" required />
+        </div>
+        <input
+          type="number"
+          id="amount"
+          placeholder="Amount (+income, -expense)"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+
+    <script src="./script.js defer></script>
+  </body>
+</html>
