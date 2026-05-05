@@ -21,7 +21,7 @@ if (form) {
 function addTransaction(e) {
   e.preventDefault();
 
-  // ✅ Validation
+  // Validation of form input to ensure all fields in the add transaction page are filled
   if (!text.value || !amount.value || !date.value) {
     alert("Please fill all fields");
     return;
@@ -36,7 +36,7 @@ function addTransaction(e) {
 
   transactions.push(transaction);
 
-  // ✅ Save
+  // Save transactions
   localStorage.setItem("transactions", JSON.stringify(transactions));
 
   // Reset form
@@ -44,7 +44,7 @@ function addTransaction(e) {
   amount.value = "";
   date.value = "";
 
-  // ✅ Update UI immediately
+  // Update UI immediately
   updateUI();
 
   // ✅ Redirect to dashboard (better UX)
@@ -98,7 +98,7 @@ function deleteTransaction(id) {
 function updateChart(income, expense) {
   if (!chartCanvas) return;
 
-  // ✅ Destroy old chart
+  // Destroy old chart
   if (chart) {
     chart.destroy();
   }

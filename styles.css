@@ -52,11 +52,13 @@ nav a:hover {
 h1 {
   text-align: center;
   margin-bottom: 15px;
+  color: #007bff;
 }
 
 h2 {
   text-align: center;
   margin: 10px 0;
+  color:#0eec49c6;
 }
 
 /* Summary Cards */
