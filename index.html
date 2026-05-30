@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Finance Tracker</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -17,6 +17,9 @@
       <a href="./index.html">Dashboard</a>
       <a href="./addtransaction.html">Add Transaction</a>
       <a href="./transactionhistory.html">Transaction History</a>
+      <button id="themeToggle" class="theme-toggle" type="button">
+        Dark Mode
+      </button>
     </nav>
 
     <div class="container">
@@ -35,9 +38,36 @@
         </div>
       </div>
 
+      <div class="dashboard-widgets">
+        <div class="goal-card">
+          <h3>Savings Goal</h3>
+          <div class="goal-info">
+            <input
+              type="number"
+              id="goalInput"
+              placeholder="Monthly goal"
+              min="0"
+            />
+            <button id="saveGoalBtn" type="button">Save Goal</button>
+          </div>
+          <div class="goal-progress">
+            <div class="goal-bar">
+              <div id="goalBarFill"></div>
+            </div>
+            <p id="goalText">No goal set yet.</p>
+          </div>
+        </div>
+
+        <div class="recent-card">
+          <h3>Recent Activity</h3>
+          <ul id="recentList" class="recent-list"></ul>
+        </div>
+      </div>
+
       <canvas id="chart"></canvas>
     </div>
 
+    <div id="toast" class="toast-container"></div>
     <script src="./script.js" defer></script>
   </body>
 </html>

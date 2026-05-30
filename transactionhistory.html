@@ -1,24 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>History</title>
-  <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-<h1>Personal Finance Tracker</h1>
-<nav>
-  <a href="./index.html">Dashboard</a>
-  <a href="./addtransaction.html">Add Transaction</a>
-  <a href="./transactionhistory.html">Transaction History</a>
-</nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Personal Finance Tracker</h1>
+    <nav>
+      <a href="./index.html">Dashboard</a>
+      <a href="./addtransaction.html">Add Transaction</a>
+      <a href="./transactionhistory.html">Transaction History</a>
+    </nav>
 
-<div class="container">
-  <h1>Transaction History</h1>
-  <ul id="list"></ul>
-</div>
+    <div class="container">
+      <h1>Transaction History</h1>
+      <div class="history-controls">
+        <input
+          id="historySearch"
+          type="search"
+          placeholder="Search description or category"
+        />
+        <select id="historyFilter">
+          <option value="all">All transactions</option>
+          <option value="income">Income</option>
+          <option value="expense">Expenses</option>
+        </select>
+        <button id="clearHistory" type="button" class="secondary-btn">
+          Clear All
+        </button>
+      </div>
+      <ul id="list"></ul>
+    </div>
 
-<script src="./script.js" defer></script>
-</body>
+    <div id="toast" class="toast-container"></div>
+    <script src="./script.js" defer></script>
+  </body>
 </html>
