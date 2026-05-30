@@ -23,7 +23,7 @@ const toastContainer =
 let chart;
 let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 let savingsGoal = Number(localStorage.getItem("savingsGoal")) || 0;
-let currentTheme = localStorage.getItem("theme") || "light";
+let currentTheme = localStorage.getItem("theme") || "dark";
 
 if (form) form.addEventListener("submit", addTransaction);
 if (historySearch) historySearch.addEventListener("input", updateUI);
